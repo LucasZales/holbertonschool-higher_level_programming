@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("{}".format("".join(chr(i) for i in range(ord('a'),ord('z')+1))),end="")
+for letra in range(97 , 123):
+    print("{}".format((chr(letra))), end="")
