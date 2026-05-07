@@ -8,6 +8,6 @@ for letter in range(122, 96, -1):
     else:
         char = char.lower()
 
-    print("{}".format(char), end ="")
+    print("{}".format(char),end="")
 
     upper = not upper
