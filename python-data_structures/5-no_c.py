@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
+    new_list = ""
     for char in my_string:
         if char != 'C' or char != 'c':
-            return my_string
+            new_list += char
+    return new_list
