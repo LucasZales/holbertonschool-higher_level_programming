@@ -8,7 +8,7 @@ def add_integer(a, b=98):
     """
     
     if type(a) not in (int, float):
-        return "a must be an integer"
+        raise "a must be an integer"
     elif type(b) not in (int, float):
-        return "b must be an integer"
+        raise "b must be an integer"
     return int(a) + int(b)
