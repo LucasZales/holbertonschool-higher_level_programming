@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-class square:
+class Square:
     pass
-cuadrado = square()
-print(cuadrado)
