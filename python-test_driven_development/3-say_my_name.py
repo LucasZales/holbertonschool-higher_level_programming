@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+
+d = __import__("3-say_my_name").__doc__
+
 def say_my_name(first_name, last_name=""):
     """Prints My name is <first name> <last name>"""
     
