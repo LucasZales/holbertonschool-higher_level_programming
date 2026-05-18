@@ -5,7 +5,7 @@
 def text_indentation(text):
     """Prints text with 2 new lines after '.', '?' and ':'"""
 
-    if not isinstance(text , str):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
 
     idx = 0
