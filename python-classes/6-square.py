@@ -5,7 +5,7 @@
 class Square:
     """an empy class with nothing"""
 
-    def __init__(self, size=0 , position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
 
@@ -14,14 +14,14 @@ class Square:
 
     def my_print(self):
         """prints the square with #"""
-        
+
         if self.size == 0:
             print()
             return
-        
+
         for i in range(self.position[1]):
             print()
-            
+
         for i in range(self.size):
             print(" " * self.position[0] + "#" * self.size)
 
@@ -40,14 +40,14 @@ class Square:
     @property
     def position(self):
         return self.__position
-    
+
     @position.setter
     def position(self, value):
-        
-        if (not isinstance(value, tuple) or 
+
+        if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(i, int) and i >= 0 for i in value)):
-            
+
             raise TypeError(
                 "position must be a tuple of 2 positive integers"
             )
