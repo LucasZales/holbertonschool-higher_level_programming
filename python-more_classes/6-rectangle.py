@@ -6,6 +6,7 @@ class Rectangle:
     """an empty class"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -52,7 +53,7 @@ class Rectangle:
 
         result = ""
         for i in range(self.__height):
-            result += "#" * self.__width
+            result += str(self.print_symbol) * self.__width
             if i != self.__height - 1:
                 result += "\n"
         return result
