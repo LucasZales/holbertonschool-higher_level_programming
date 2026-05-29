@@ -1,27 +1,63 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> bg = BaseGeometry()
+Base Geometry
+=============
 
->>> bg.integer_validator("my_int", 12)
+Import the Module
+-----------------
+>>> bg = __import__('7-base_geometry').BaseGeometry
 
->>> bg.integer_validator("width", 89)
+Instantiation
+-------------
+>>> obj = bg()
+>>> type(obj)
+<class '7-base_geometry.BaseGeometry'>
 
->>> try:
-...     bg.integer_validator("name", "John")
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-...
-[TypeError] name must be an integer
+Area
+----
+>>> obj.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
 
->>> try:
-...     bg.integer_validator("age", 0)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-...
-[ValueError] age must be greater than 0
+Integer Validator
+-----------------
 
->>> try:
-...     bg.integer_validator("distance", -4)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-...
-[ValueError] distance must be greater than 0
+>>> obj.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> obj.integer_validator("age")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> obj.integer_validator("age", 1)
+
+>>> obj.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> obj.integer_validator("age", -4)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> obj.integer_validator("age", "4")
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> obj.integer_validator("age", (4,))
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> obj.integer_validator("age", [3])
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> obj.integer_validator("age", True)
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> obj.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> obj.integer_validator("age", None)
+Traceback (most recent call last):
+TypeError: age must be an integer
