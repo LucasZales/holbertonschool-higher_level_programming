@@ -10,8 +10,9 @@ filename = "add_item_json"
 
 try:
     items = load(filename)
-    items += argv[1:]
 except Exception:
-    items = argv[1:]
+    items = []
+
+items.extend(argv[1:])
     
 save(items, filename)
