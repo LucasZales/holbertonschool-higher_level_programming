@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+"""Add all arguments"""
+
+from sys import argv
+
+save = __import__("5-save_to_json_file").save_to_json_file
+load = __import__("6-load_from_json_file").load_from_json_file
+
+filename = "add_item_json"
+
+try:
+    items = load(filename)
+    items += argv[1:]
+except Exception:
+    items = argv[1:]
+    
+save(items, filename)
