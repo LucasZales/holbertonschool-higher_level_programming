@@ -14,5 +14,5 @@ except Exception:
     items = []
 
 items.extend(argv[1:])
-    
+
 save(items, filename)
