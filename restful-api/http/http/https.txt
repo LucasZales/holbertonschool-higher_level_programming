@@ -1,0 +1,15 @@
+https is encrypted with verification 
+http is not encrypted which means anyone on the way could intercept the information that you are trying to send (like passwords , personal information)
+
+http and https are protocols that are used to send information between the browser and a website , the main difference is the security .
+
+http status codes are numbers that a browser sends to the website or an api to indicate what happened with a request
+when you make a request the server always responds with a code that tells you if everything went well or if there was a problem.
+
+list of some status code:
+201 - the request has been fulfilled , resulting in the creation of a new resource
+202 - the request has been accepted for processing, but the processing has not been completed.
+400 - the server cannot or will not process the request due to an apparent client error
+401 - unauthorized / failed or has not yet been provided.
+404 - the requested resource could not be found but may be available in the future.
+ 
