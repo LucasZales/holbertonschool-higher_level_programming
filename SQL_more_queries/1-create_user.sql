@@ -1,2 +1,6 @@
 -- creates a server user
-CREATE USER IF NOT EXISTS user_0d_1@localhost IDENTIFIED BY 'user_0d_1_pwd'
+CREATE USER IF NOT EXISTS user_0d_1@localhost 
+IDENTIFIED WITH authentication_plugin BY 'user_0d_1_pwd'
+GRANT ALL PRIVILEGES ON hbtn_0c_0.* TO user_0d_1
+CREATE USER IF NOT EXITS user_0d_2@localhost
+IDENTIFIED WITH authentication_plugin BY 'user_0d_2_pwd'
