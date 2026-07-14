@@ -7,6 +7,6 @@ if (args[0] === undefined) {
   console.log('Missing size');
 } else if (!isNaN(veces)) {
   for (let fila = 0; fila < veces; fila++) {
-    console.log('x'.repeat(veces));
+    console.log('X'.repeat(veces));
   }
 }
