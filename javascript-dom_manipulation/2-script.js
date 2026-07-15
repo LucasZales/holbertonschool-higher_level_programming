@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-const adding = document.querySelector("header");
+const adding = document.querySelector('header');
 
-adding.classList.add("red");
+adding.classList.add('red');
