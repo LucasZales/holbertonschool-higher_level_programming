@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states matching the user input."""
+"""Filter states by user input."""
 
 import MySQLdb
 import sys
@@ -14,16 +14,12 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
 
-    cursor = db.cursor()
+    cur = db.cursor()
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(sys.argv[4])
+    cur.execute(query)
 
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
-        sys.argv[4]
-    )
-
-    cursor.execute(query)
-
-    for row in cursor.fetchall():
+    for row in cur.fetchall():
         print(row)
 
-    cursor.close()
+    cur.close()
     db.close()
